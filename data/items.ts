@@ -14,7 +14,7 @@ const getImageUrl = (name: string) => {
     .replace(/\s+/g, '_')
     .replace(/[()]/g, '')
     .replace(/_+/g, '_');
-  return `https://raw.githubusercontent.com/RaidTheory/arcraiders-data/main/images/items/${filename}.png`;
+  return `https://cdn.arctracker.io/items/${filename}.png`;
 };
 
 export const items: Item[] = [
