@@ -25,11 +25,11 @@ export default function Home() {
   const getActionBadge = (type: string) => {
     switch (type) {
       case 'sell':
-        return <span className="px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-xs font-semibold border border-emerald-500/30">SELL</span>;
+        return <span className="px-2 md:px-3 py-1 bg-emerald-500/20 text-emerald-400 rounded-full text-[10px] md:text-xs font-semibold border border-emerald-500/30 whitespace-nowrap">SELL</span>;
       case 'recycle':
-        return <span className="px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-xs font-semibold border border-blue-500/30">RECYCLE</span>;
+        return <span className="px-2 md:px-3 py-1 bg-blue-500/20 text-blue-400 rounded-full text-[10px] md:text-xs font-semibold border border-blue-500/30 whitespace-nowrap">RECYCLE</span>;
       default:
-        return <span className="px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-xs font-semibold border border-amber-500/30">CONDITIONAL</span>;
+        return <span className="px-2 md:px-3 py-1 bg-amber-500/20 text-amber-400 rounded-full text-[10px] md:text-xs font-semibold border border-amber-500/30 whitespace-nowrap">KEEP</span>;
     }
   };
 
@@ -37,17 +37,69 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">
       <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI2MCIgaGVpZ2h0PSI2MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAxMCAwIEwgMCAwIDAgMTAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsMjU1LDI1NSwwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-40"></div>
 
-      <div className="relative max-w-7xl mx-auto px-4 py-16">
-        <header className="text-center mb-16">
-          <div className="inline-block mb-4 px-4 py-1.5 bg-blue-500/10 border border-blue-500/20 rounded-full">
-            <span className="text-blue-400 text-sm font-medium">Arc Raiders • 275+ Items</span>
+      <div className="relative max-w-7xl mx-auto px-3 md:px-4 py-8 md:py-16">
+        <header className="text-center mb-12 md:mb-16">
+          <div className="inline-block mb-4 px-4 py-2 bg-blue-500/10 border border-blue-500/20 rounded-full">
+            <span className="text-blue-400 text-sm md:text-base font-medium">Arc Raiders • 275+ Items</span>
           </div>
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4 tracking-tight">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 tracking-tight px-4">
             Item Guide
           </h1>
-          <p className="text-gray-400 text-lg">
+          <p className="text-gray-400 text-base md:text-lg px-4 mb-6">
             Search any item to see if you should sell, recycle, or save it
           </p>
+
+          {/* Share Buttons */}
+          <div className="flex flex-wrap items-center justify-center gap-3 mt-8">
+            <button
+              onClick={() => {
+                const url = 'https://arc-raiders-guide.vercel.app';
+                const text = 'Arc Raiders Item Guide - Know what to sell, recycle, or save! 275+ items database';
+                window.open(`https://www.reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(text)}`, '_blank');
+              }}
+              className="flex items-center gap-2 px-4 py-2.5 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/30 rounded-lg text-orange-400 font-medium transition-all hover:scale-105 active:scale-95"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/>
+              </svg>
+              <span className="hidden sm:inline">Share on Reddit</span>
+              <span className="sm:hidden">Reddit</span>
+            </button>
+
+            <button
+              onClick={() => {
+                const url = 'https://arc-raiders-guide.vercel.app';
+                const text = 'Arc Raiders Item Guide - Know what to sell, recycle, or save! 275+ items';
+                window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`, '_blank');
+              }}
+              className="flex items-center gap-2 px-4 py-2.5 bg-blue-500/10 hover:bg-blue-500/20 border border-blue-500/30 rounded-lg text-blue-400 font-medium transition-all hover:scale-105 active:scale-95"
+            >
+              <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+              <span className="hidden sm:inline">Share on X</span>
+              <span className="sm:hidden">X</span>
+            </button>
+
+            <button
+              onClick={() => {
+                navigator.clipboard.writeText('https://arc-raiders-guide.vercel.app');
+                const btn = event?.currentTarget as HTMLButtonElement;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg><span>Copied!</span>';
+                setTimeout(() => {
+                  btn.innerHTML = originalText;
+                }, 2000);
+              }}
+              className="flex items-center gap-2 px-4 py-2.5 bg-green-500/10 hover:bg-green-500/20 border border-green-500/30 rounded-lg text-green-400 font-medium transition-all hover:scale-105 active:scale-95"
+            >
+              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+              </svg>
+              <span className="hidden sm:inline">Copy Link</span>
+              <span className="sm:hidden">Copy</span>
+            </button>
+          </div>
         </header>
 
         <div className="flex gap-6 justify-center">
@@ -72,43 +124,43 @@ export default function Home() {
 
           {/* Main Content - Centered */}
           <div className="flex-1 max-w-4xl">
-            <div className="mb-12">
+            <div className="mb-8 md:mb-12">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
                 <div className="relative flex items-center">
-                  <svg className="absolute left-6 w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="absolute left-4 md:left-6 w-5 h-5 md:w-6 md:h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                   <input
                     type="text"
-                    placeholder="Type item name... (e.g. Rubber Duck, Syringe, Music Box)"
+                    placeholder="Type item name... (e.g. Rubber Duck, Syringe)"
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
-                    className="w-full pl-14 pr-6 py-5 text-lg bg-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-xl"
+                    className="w-full pl-12 md:pl-14 pr-4 md:pr-6 py-4 md:py-5 text-base md:text-lg bg-slate-900/90 backdrop-blur-sm border border-slate-700/50 rounded-2xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500/50 focus:ring-2 focus:ring-blue-500/20 transition-all shadow-xl"
                     autoFocus
                   />
                 </div>
               </div>
 
               {searchTerm && (
-                <div className="mt-4 text-sm text-gray-500 px-2">
+                <div className="mt-3 md:mt-4 text-sm text-gray-500 px-2">
                   <span className="font-medium text-gray-400">{filteredItems.length}</span> {filteredItems.length === 1 ? 'item' : 'items'} found
                 </div>
               )}
             </div>
 
-            <div className="space-y-4">
+            <div className="space-y-3 md:space-y-4">
               {filteredItems.map((item, index) => {
                 const actionType = getActionType(item);
                 return (
                   <div
                     key={index}
-                    className="group bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 hover:bg-slate-900/80 hover:border-slate-700/50 transition-all duration-200 hover:shadow-2xl hover:scale-[1.01]"
+                    className="group bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-xl md:rounded-2xl p-4 md:p-6 hover:bg-slate-900/80 hover:border-slate-700/50 transition-all duration-200 hover:shadow-2xl active:scale-[0.99] md:hover:scale-[1.01]"
                   >
-                    <div className="flex items-start gap-4">
+                    <div className="flex items-start gap-3 md:gap-4">
                       {/* Item Image */}
                       <div className="flex-shrink-0">
-                        <div className="relative w-20 h-20 rounded-xl overflow-hidden border-2 border-slate-700/50 bg-slate-800/50 group-hover:border-blue-500/30 transition-colors">
+                        <div className="relative w-16 h-16 md:w-20 md:h-20 rounded-lg md:rounded-xl overflow-hidden border-2 border-slate-700/50 bg-slate-800/50 group-hover:border-blue-500/30 transition-colors">
                           <img
                             src={item.image}
                             alt={item.name}
@@ -121,31 +173,31 @@ export default function Home() {
                       </div>
 
                       {/* Item Info */}
-                      <div className="flex-1">
-                        <div className="flex items-start justify-between mb-3">
-                          <div>
-                            <h2 className="text-2xl font-bold text-white mb-1">{item.name}</h2>
-                            <p className="text-gray-400 leading-relaxed text-sm">{item.condition}</p>
+                      <div className="flex-1 min-w-0">
+                        <div className="flex items-start justify-between gap-2 mb-2 md:mb-3">
+                          <div className="flex-1 min-w-0">
+                            <h2 className="text-lg md:text-2xl font-bold text-white mb-1 truncate">{item.name}</h2>
+                            <p className="text-gray-400 leading-relaxed text-xs md:text-sm line-clamp-2">{item.condition}</p>
                           </div>
-                          <div className="ml-4 flex-shrink-0">
+                          <div className="flex-shrink-0">
                             {getActionBadge(actionType)}
                           </div>
                         </div>
 
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mt-4 pt-4 border-t border-slate-800/50">
-                          <div className="bg-slate-950/50 rounded-xl p-3 border border-slate-800/30">
-                            <div className="text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Sell Price</div>
-                            <div className="text-xl font-bold text-emerald-400">
+                        <div className="grid grid-cols-2 gap-2 md:gap-3 mt-3 md:mt-4 pt-3 md:pt-4 border-t border-slate-800/50">
+                          <div className="bg-slate-950/50 rounded-lg md:rounded-xl p-2 md:p-3 border border-slate-800/30">
+                            <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Sell Price</div>
+                            <div className="text-base md:text-xl font-bold text-emerald-400">
                               {item.sellPrice === '-' ? (
-                                <span className="text-gray-600 text-base">N/A</span>
+                                <span className="text-gray-600 text-sm md:text-base">N/A</span>
                               ) : (
                                 `$${item.sellPrice}`
                               )}
                             </div>
                           </div>
-                          <div className="bg-slate-950/50 rounded-xl p-3 border border-slate-800/30">
-                            <div className="text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Recycles Into</div>
-                            <div className="text-sm font-medium text-blue-400 leading-relaxed">
+                          <div className="bg-slate-950/50 rounded-lg md:rounded-xl p-2 md:p-3 border border-slate-800/30">
+                            <div className="text-[10px] md:text-xs text-gray-500 uppercase tracking-wider mb-1 font-semibold">Recycles Into</div>
+                            <div className="text-xs md:text-sm font-medium text-blue-400 leading-relaxed line-clamp-2">
                               {item.recycles === '-' ? (
                                 <span className="text-gray-600">Nothing</span>
                               ) : (
