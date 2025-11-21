@@ -50,35 +50,21 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="flex gap-8 justify-center">
+        <div className="flex gap-6 justify-center">
           {/* Left Sidebar for Ads */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
-            <div className="sticky top-8 space-y-6">
-              {/* Ad Placeholder 1 */}
-              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
-                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
-                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
-                  <div className="text-gray-600 text-sm">
-                    <p className="mb-2">Google AdSense</p>
-                    <p className="text-xs">300x250 Ad Unit</p>
+          <div className="hidden lg:block w-48 flex-shrink-0">
+            <div className="sticky top-8">
+              {/* Ad Placeholder - Skyscraper */}
+              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-4 text-center">
+                <div className="text-gray-500 text-xs mb-2 font-semibold">Advertisement</div>
+                <div className="bg-slate-800/50 rounded-xl h-[600px] w-[160px] mx-auto flex items-center justify-center border border-slate-700/30">
+                  <div className="text-gray-600 text-xs rotate-90">
+                    <p className="mb-1">Google AdSense</p>
+                    <p className="text-[10px]">160x600</p>
                   </div>
                 </div>
                 <div className="mt-3 text-xs text-gray-600">
-                  Add your AdSense code here
-                </div>
-              </div>
-
-              {/* Ad Placeholder 2 */}
-              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
-                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
-                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
-                  <div className="text-gray-600 text-sm">
-                    <p className="mb-2">Google AdSense</p>
-                    <p className="text-xs">300x250 Ad Unit</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-xs text-gray-600">
-                  Add your AdSense code here
+                  Wide Skyscraper
                 </div>
               </div>
             </div>
@@ -201,33 +187,19 @@ export default function Home() {
           </div>
 
           {/* Right Sidebar for Ads */}
-          <div className="hidden lg:block w-80 flex-shrink-0">
-            <div className="sticky top-8 space-y-6">
-              {/* Ad Placeholder 3 */}
-              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
-                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
-                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
-                  <div className="text-gray-600 text-sm">
-                    <p className="mb-2">Google AdSense</p>
-                    <p className="text-xs">300x250 Ad Unit</p>
+          <div className="hidden lg:block w-48 flex-shrink-0">
+            <div className="sticky top-8">
+              {/* Ad Placeholder - Skyscraper */}
+              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-4 text-center">
+                <div className="text-gray-500 text-xs mb-2 font-semibold">Advertisement</div>
+                <div className="bg-slate-800/50 rounded-xl h-[600px] w-[160px] mx-auto flex items-center justify-center border border-slate-700/30">
+                  <div className="text-gray-600 text-xs rotate-90">
+                    <p className="mb-1">Google AdSense</p>
+                    <p className="text-[10px]">160x600</p>
                   </div>
                 </div>
                 <div className="mt-3 text-xs text-gray-600">
-                  Add your AdSense code here
-                </div>
-              </div>
-
-              {/* Ad Placeholder 4 */}
-              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
-                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
-                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
-                  <div className="text-gray-600 text-sm">
-                    <p className="mb-2">Google AdSense</p>
-                    <p className="text-xs">300x250 Ad Unit</p>
-                  </div>
-                </div>
-                <div className="mt-3 text-xs text-gray-600">
-                  Add your AdSense code here
+                  Wide Skyscraper
                 </div>
               </div>
             </div>
