@@ -1,36 +1,18 @@
 # Arc Raiders Item Guide
 
-A searchable database for Arc Raiders items. Quickly find out which items to keep for quests, use for upgrading benches, or safely recycle.
+A simple search tool for Arc Raiders items. Type an item name and instantly know what to do with it - sell, recycle, or save for quests and upgrades.
 
 ## Features
 
-- **Advanced Search**: Search by item name, category, or description
-- **Multi-Filter System**: Filter by category and rarity
-- **Sorting Options**: Sort items by name, category, or rarity
-- **Quick Category Buttons**: One-click access to major categories
-- **Responsive Design**: Works on desktop, tablet, and mobile
+- **Clean Search**: Just type an item name, no complex filters
+- **Instant Results**: Get sell price, recycle materials, and conditions
+- **135+ Items**: Complete database of Arc Raiders recyclable items
 
-## Categories
+## How to Use
 
-- **Keep for Quests**: Items required for quest completion
-- **Upgrading Benches**: Materials needed for workbench upgrades
-- **Safely Recycle**: Items that can be discarded without consequence
-
-## Getting Started
-
-First, install dependencies:
-
-```bash
-npm install
-```
-
-Then, run the development server:
-
-```bash
-npm run dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) in your browser.
+1. Type an item name in the search bar
+2. See what to do with it - the condition tells you if it's safe to sell/recycle or if you should wait
+3. Check sell price and what materials you'll get from recycling
 
 ## Tech Stack
 
@@ -38,6 +20,22 @@ Open [http://localhost:3000](http://localhost:3000) in your browser.
 - React 19
 - TypeScript
 - Tailwind CSS
+
+## Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run development server:
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
 ## License
 
