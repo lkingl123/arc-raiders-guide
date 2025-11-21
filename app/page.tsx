@@ -50,9 +50,42 @@ export default function Home() {
           </p>
         </header>
 
-        <div className="flex gap-8">
-          {/* Main Content */}
-          <div className="flex-1">
+        <div className="flex gap-8 justify-center">
+          {/* Left Sidebar for Ads */}
+          <div className="hidden lg:block w-80 flex-shrink-0">
+            <div className="sticky top-8 space-y-6">
+              {/* Ad Placeholder 1 */}
+              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
+                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
+                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
+                  <div className="text-gray-600 text-sm">
+                    <p className="mb-2">Google AdSense</p>
+                    <p className="text-xs">300x250 Ad Unit</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-xs text-gray-600">
+                  Add your AdSense code here
+                </div>
+              </div>
+
+              {/* Ad Placeholder 2 */}
+              <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
+                <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
+                <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
+                  <div className="text-gray-600 text-sm">
+                    <p className="mb-2">Google AdSense</p>
+                    <p className="text-xs">300x250 Ad Unit</p>
+                  </div>
+                </div>
+                <div className="mt-3 text-xs text-gray-600">
+                  Add your AdSense code here
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Main Content - Centered */}
+          <div className="flex-1 max-w-4xl">
             <div className="mb-12">
               <div className="relative group">
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl blur-xl opacity-20 group-hover:opacity-30 transition-opacity"></div>
@@ -167,10 +200,10 @@ export default function Home() {
             )}
           </div>
 
-          {/* Sidebar for Ads */}
+          {/* Right Sidebar for Ads */}
           <div className="hidden lg:block w-80 flex-shrink-0">
             <div className="sticky top-8 space-y-6">
-              {/* Ad Placeholder 1 */}
+              {/* Ad Placeholder 3 */}
               <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
                 <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
                 <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
@@ -184,7 +217,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Ad Placeholder 2 */}
+              {/* Ad Placeholder 4 */}
               <div className="bg-slate-900/60 backdrop-blur-sm border border-slate-800/50 rounded-2xl p-6 text-center">
                 <div className="text-gray-500 text-sm mb-2 font-semibold">Advertisement</div>
                 <div className="bg-slate-800/50 rounded-xl h-64 flex items-center justify-center border border-slate-700/30">
